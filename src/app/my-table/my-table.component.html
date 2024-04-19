@@ -1,0 +1,5 @@
+@for(row of rows; track row.msg){
+<div (click)="onRowClicked(row)" class="row" [class.selected]="selectedMessage === row">{{row.msg}} likes:
+    {{row.likes}}
+</div>
+}

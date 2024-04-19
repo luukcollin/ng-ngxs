@@ -1,0 +1,10 @@
+<button (click)="navigateToContact()">navigate</button>
+<button (click)="addAllMessagesToState()">Add all messages to state</button>
+<div> Launched at:{{(launchedAt$ | async)}}</div>
+<app-my-table (onItemClicked)="messageSelectionChanged($event)" [selectedMessage]="selectedMessage$ | async"
+    [rows]="myMessages$ | async"></app-my-table>
+<div>
+    <p></p>
+</div>
+<!-- <app-my-table (onItemClicked)="messageSelectionChangedForTable2($event)" [selectedMessage]="selectedMessageTable2"
+    [rows]="myMessages"></app-my-table> -->
